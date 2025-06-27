@@ -1,0 +1,8 @@
+A Firewall filters traffic by comparing every packet that is sent to the machine or network with a set of already defined security rules.
+The rules say that if a packet can be allowed on that specific port or denied.
+
+It sees what the source ip,destination ip, port and protocols are in the header,
+then tries to sequentially compare to a rule, if packet matches a rule alowing traffic then that is alowed,
+if matches a block rule then blocked or dropped if matches the drop rule.(deny and send a message to sender)
+
+Then it logs the action taken to help in further security auditing.

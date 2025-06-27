@@ -1,0 +1,16 @@
+the commands used are:
+sudo iptables --list-rules : for getting the current rules
+
+sudo ufw deny 80: rule added to the ufw to deny any incoming traffic on port 80 whether tcp or udp
+
+telnet 10.0.2.15 80: for checking locally if port 80 can have a connection. it cannot.
+
+sudo ufw delete deny 80: deleting the new rule added.
+
+sudo ufw allow 22: rule added to the ufw to allow any incoming traffic on port 22 whether tcp or udp.
+
+nc -zv localhost 22: for checking that port 22 can have a connection. it can. nc is netcat which listens in on ports,
+-z is for scanning without sending data
+-v for verbose to get detailed explanation
+localhost tells us the server is the local machine
+22 is the port we want to check
